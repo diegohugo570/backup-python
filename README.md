@@ -30,59 +30,161 @@ Todo o conteúdo foi criado e executado no **Google Colab**, com abordagem prát
   Introdução à arquitetura baseada em grafos, estados e fluxos de agentes.
 
 - **Criando seus primeiros Agentic Workflows**  
-  Implementação prática de fluxos agentic usando LangGraph.
+  Criação prática de fluxos agentic com:
+
+- Estados persistentes  
+- Execução condicional  
+- Orquestração de múltiplos agentes  
 
 - **Routers & Arquitetura de Agentes**  
-  Estratégias de roteamento, modularização e orquestração de agentes inteligentes.
+  Estratégias de:
+
+- Modularização  
+- Separação de responsabilidades  
+- Encaminhamento inteligente entre agentes
 
 - **Routers Preditivos (LLM Routing)**  
-  Uso de LLMs para tomada de decisão dinâmica entre agentes.
+  Uso de LLMs como camada decisória para escolher dinamicamente qual agente ou fluxo deve ser executado.
 
 - **LangGraph do Zero — Aula Prática**  
-  Construção passo a passo de agentes utilizando LangGraph desde o início.
+  Construção passo a passo de um agente funcional utilizando LangGraph.
 
 ---
 
 ### 🔎 RAG — Retrieval-Augmented Generation
+
 - **Curso de RAG (DascIA Academy)**  
-  Construção de pipelines RAG com:
-  - Recuperação de contexto  
-  - Enriquecimento de respostas com documentos  
-  - Integração com LLMs  
+  Desenvolvimento de pipelines completos de RAG aplicando:
+
+  - Indexação e chunking de documentos  
+  - Criação de embeddings  
+  - Armazenamento em Vector Store  
+  - Recuperação semântica de contexto  
+  - Enriquecimento dinâmico de prompts  
+  - Integração estruturada com LLMs  
+
+  Foco em aplicações corporativas, bases privadas de conhecimento e sistemas de consulta inteligente.
 
 ---
 
 ### 🎨 IA Generativa & Ferramentas
+
 - **ComfyUI no Google Colab**  
-  Implementação e uso de pipelines de geração de imagens com IA no ambiente Colab.
+  Implementação prática de pipelines de geração de imagens com IA, incluindo:
+
+  - Configuração de ambiente no Colab  
+  - Execução de workflows visuais  
+  - Manipulação de modelos generativos  
+  - Customização de parâmetros para controle de geração  
+
+  Aplicação voltada para experimentação, prototipagem e compreensão da arquitetura de modelos de difusão.
 
 ---
 
 ### 🐍 Fundamentos de Python
+
 - **Python Básico (DascIA Academy)**  
-  Sintaxe, variáveis, estruturas de controle e fundamentos da linguagem.
+  Domínio de:
+
+  - Sintaxe e estrutura da linguagem  
+  - Variáveis e tipos de dados  
+  - Estruturas condicionais e loops  
+  - Funções e organização básica de código  
 
 - **Fundamentos de Programação**  
-  Base lógica para desenvolvimento em Python.
+  Desenvolvimento de raciocínio lógico aplicado a:
+
+  - Resolução de problemas  
+  - Estruturação algorítmica  
+  - Boas práticas iniciais  
 
 - **Format e f-strings**  
-  Manipulação e formatação moderna de strings.
+  Uso moderno de formatação de strings para geração dinâmica de textos e construção de mensagens estruturadas.
 
-- **Mudança de tipo de variável**  
-  Conversão de tipos e boas práticas em Python.
+- **Conversão e Manipulação de Tipos**  
+  Casting entre tipos (int, float, str, bool), validação de dados e boas práticas para evitar erros em tempo de execução.
 
 ---
 
-### 📊 Projetos Práticos
-- **Final Project — AUS Weather**  
-  Projeto final com análise e manipulação de dados climáticos, aplicando conceitos de Python e Data Analysis.
+# 📊 Projetos Práticos
+
+## 🌦️ Final Project — AUS Weather
+
+Projeto aplicado utilizando dados climáticos da Austrália para:
+
+- Manipulação e análise de dados  
+- Tratamento de datasets  
+- Estruturação lógica de código  
+- Aplicação prática de fundamentos de Python  
+
+Projeto focado em consolidação técnica e raciocínio analítico.
+
+---
+
+# ⭐ Projetos em Destaque
+
+## 🚀 1️⃣ Text2SQL Agent
+
+Agente inteligente capaz de:
+
+- Receber perguntas em linguagem natural  
+- Interpretar intenção do usuário  
+- Gerar queries SQL automaticamente  
+- Consultar banco de dados  
+- Retornar respostas estruturadas  
+
+### Tecnologias:
+- Python  
+- LLMs  
+- Arquitetura de Agente  
+- Orquestração de fluxo  
+
+Aplicação prática de IA para análise de dados orientada por linguagem natural.
+
+---
+
+## ⚡ 2️⃣ API Profissional com FastAPI
+
+Projeto estruturado utilizando:
+
+- FastAPI  
+- Docker  
+- Docker Compose  
+- Alembic (migrations)  
+- Arquitetura modular  
+- Variáveis de ambiente  
+- Estrutura pronta para produção  
+
+### Conceitos aplicados:
+- Criação de rotas REST  
+- Validação com Pydantic  
+- Separação por camadas  
+- Organização profissional de projeto  
+- Preparação para deploy  
+
+Projeto voltado para construção de APIs modernas e escaláveis em Python.
+
+---
+
+## 🌦️ 3️⃣ AUS Weather — Projeto de Análise de Dados
+
+Projeto de análise e manipulação de dados climáticos aplicando:
+
+- Fundamentos de Python  
+- Estruturação lógica  
+- Limpeza e manipulação de dados  
+
+Representa a consolidação da base técnica para evoluções em Data Science e IA.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 - Python  
 - Jupyter Notebook  
-- Google Colab  
+- Google Colab
+- FastAPI
+- Docker & Docker Compose
+- Alembic
 - LLMs (aplicações práticas)  
 - LangGraph  
 - RAG (Retrieval-Augmented Generation)  
@@ -92,10 +194,11 @@ Todo o conteúdo foi criado e executado no **Google Colab**, com abordagem prát
 
 ## 🎯 Objetivo do Repositório
 Este repositório tem como objetivo:
-- Consolidar conhecimentos em **IA aplicada e LLMs**
+- Consolidar conhecimento técnico em **Python e IA**
+- Demonstrar evolução prática como AI Engineer
 - Servir como **portfólio técnico profissional**
 - Demonstrar aplicações reais de IA em **negócios e automações**
-- Compartilhar conhecimento de forma prática, clara e reutilizável
+- Construir base sólida para agentes autônomos e APIs inteligentes
 
 ---
 
@@ -107,6 +210,7 @@ Especialista em Inteligência Artificial com foco em **Automações Inteligentes
 - IA Generativa  
 - Agentes Autônomos (LangGraph)  
 - RAG  
+- APIs com FastAPI 
 - Automação Inteligente (Python / n8n)  
 - Aplicações reais de IA para empresas  
 
@@ -114,6 +218,7 @@ Especialista em Inteligência Artificial com foco em **Automações Inteligentes
 
 ## 📄 Observações
 - Os notebooks são independentes e podem ser executados separadamente no **Google Colab**
+- Os projetos estruturados seguem padrão profissional
 - O conteúdo é voltado tanto para aprendizado quanto para aplicação prática em projetos reais
 
 🚀 Fique à vontade para explorar, estudar, adaptar e evoluir os códigos.

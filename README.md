@@ -220,7 +220,13 @@ Chat de terminal com memória persistente:
 - Estrutura organizada por roles  
 
 Aplicação de persistência e controle de contexto.
-
+```
+# Salvando histórico
+with open("./modulo_2/conversation_history.txt", "a") as historico:
+    for message in new_messages:
+        historico.write(f"{message['role']}: {message['content']}\n")
+```
+       
 ---
 
 ## 🏆 6️⃣ Token Cost Calculator

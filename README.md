@@ -238,6 +238,20 @@ Mini-biblioteca para estimar custo mensal de modelos:
 - Registro automático em `log.txt`  
 
 Aplicação prática de controle financeiro de LLMs.
+```
+CUSTO_MODELOS_DOLAR = {
+    "gpt-5.1": {"input": 1.25, "output": 10},
+    "claude-4.5-opus": {"input": 5, "output": 25}
+}
+
+def calcular_custo_total(modelo: str,
+                         tokens_system_prompt: int,
+                         media_tokens_input: int,
+                         media_tokens_output: int,
+                         media_mensagens_por_dia: int) -> float:
+    # Considera janela de contexto crescente
+    # Registra cada cálculo em log.txt
+```
 
 ---
 
@@ -251,6 +265,18 @@ Mini-SDK orientado a objetos:
 - Padronização de retorno  
 
 Aplicação de POO para arquitetura extensível.
+```
+class ModeloBase:
+    def invoke(self, prompt: str, api_key: str) -> str:
+        raise NotImplementedError("Subclasses devem implementar este método")
+
+class OpenAIModel(ModeloBase):
+    def invoke(self, prompt: str, api_key: str = OPENAI_API_KEY) -> str:
+        if not api_key.startswith("sk-"):
+            raise ValueError("API Key inválida")
+        time.sleep(3)  # Simula latência
+        return {"model": self.nome, "output": "Resposta da OpenAI", "temperatura": self.temperatura}
+```
 
 ---
 
@@ -263,6 +289,19 @@ Armazenamento vetorial em memória com:
 - Retorno Top-K  
 
 Base para sistemas RAG customizados.
+```
+class VectorStore:
+    def query(self, query: np.array, k: int) -> list:
+        distances = []
+        for document, vector in zip(self.documents, self.vectors):
+            # Distância de cosseno
+            distance = 1 - (np.dot(query, vector) /
+                          (np.linalg.norm(query) * np.linalg.norm(vector)))
+            distances.append((distance, document))
+
+        distances.sort(key=lambda x: x[0])
+        return distances[:k]
+```
 
 ---
 
@@ -277,6 +316,27 @@ Pipeline ETL completo:
 - Exportação pronta para fine-tuning  
 
 Aplicação real de engenharia de dados para IA.
+```
+class ETL:
+    def pipeline(self) -> pd.DataFrame:
+        df = self.normalize_sender(self.data)      # human/ai
+        df = self.normalize_content(df)            # Remove PIIs
+        df = self.normalize_created_at(df)         # Parse datas
+        df = self.remove_duplicates(df)            # Deduplicação
+        jsonl = self.transform_data(df)            # Formato JSONL
+        self.export_data(jsonl)                    # training_data.jsonl
+        return df
+```
+
+Saída no formato para Fine-Tuning:
+```
+{
+  "messages": [
+    { "role": "user", "content": "..." },
+    { "role": "assistant", "content": "..." }
+  ]
+}
+```
 
 ---
 
@@ -289,6 +349,20 @@ Dashboard orientado a objetos para análise de datasets:
 - Geração de histogramas e gráficos  
 
 Aplicação de análise quantitativa em datasets de treinamento.
+```
+# Estrutura de classes
+DatasetReader   → Carrega e extrai textos do JSONL
+TokenStats      → Estima tokens e classifica tópicos
+DashboardPlotter → Gera histograma + gráfico de barras
+
+# Classificação por regras
+TOPIC_RULES = {
+  "Cancelamento": ["cancel", "cancelar", "assinatura"],
+  "Cobrança/Pagamento": ["cobran", "cartão", "pagamento"],
+  "App/Erro": ["trava", "erro", "bug"],
+  ...
+}
+```
 
 ---
 
@@ -302,6 +376,22 @@ Assistente de terminal com:
 - Integração com modelo LLM  
 
 Aplicação prática de arquitetura agentic em ambiente CLI.
+```
+class CLIAssistant:
+    def __init__(self, model: str, system_prompt: str, history_path: str):
+        self.agent = create_agent(self.model, tools=[
+            get_current_time,      # Retorna data/hora atual
+            count_words_in_phrase  # Conta palavras em frase
+        ])
+
+    def run(self) -> None:
+        while True:
+            user_input = input("Você: ")
+            if user_input == "/stop":
+                break
+            response = self.message_agent(HumanMessage(content=user_input))
+            print(f"AI: {response}")
+```            
 
 ---
 

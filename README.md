@@ -194,7 +194,7 @@ Script de engenharia de prompt que:
 Aplicação prática de controle de saída de LLMs.
 ```
 # Exemplo de uso
-prompt_final = f"""
+prompt_final = (blue)f"""
 # Role
 {role}
 

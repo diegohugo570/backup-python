@@ -178,6 +178,111 @@ Representa a consolidação da base técnica para evoluções em Data Science e 
 
 ---
 
+## 🏆 4️⃣ Prompt Packer
+Script de engenharia de prompt que:
+
+- Recebe via terminal:
+  - Role  
+  - Tom de voz  
+  - Tarefa  
+  - Número máximo de palavras  
+
+- Monta prompt estruturado com f-strings  
+- Estima quantidade de palavras (1 palavra ≈ 6.11 caracteres)  
+- Valida se está dentro do intervalo aceitável (±10 palavras)  
+
+Aplicação prática de controle de saída de LLMs.
+
+---
+
+## 🏆 5️⃣ Persistent Chat History
+Chat de terminal com memória persistente:
+
+- Lê histórico salvo em `.txt`  
+- Loop contínuo até `/stop`  
+- Salvamento incremental com `with open()`  
+- Estrutura organizada por roles  
+
+Aplicação de persistência e controle de contexto.
+
+---
+
+## 🏆 6️⃣ Token Cost Calculator
+Mini-biblioteca para estimar custo mensal de modelos:
+
+- Tabela de custo por modelo  
+- Cálculo baseado em tokens de entrada e saída  
+- Consideração de janela de contexto crescente  
+- Registro automático em `log.txt`  
+
+Aplicação prática de controle financeiro de LLMs.
+
+---
+
+## 🏆 7️⃣ Model Provider SDK
+Mini-SDK orientado a objetos:
+
+- Classe base abstrata  
+- Simulação de provedores  
+- Validação de API Key  
+- Controle de latência  
+- Padronização de retorno  
+
+Aplicação de POO para arquitetura extensível.
+
+---
+
+## 🏆 8️⃣ Simple Vector Store
+Armazenamento vetorial em memória com:
+
+- Vetores NumPy  
+- Cálculo de similaridade por distância de cosseno  
+- Ordenação por menor distância  
+- Retorno Top-K  
+
+Base para sistemas RAG customizados.
+
+---
+
+## 🏆 9️⃣ Fine-Tuning Dataset Prepper
+Pipeline ETL completo:
+
+- Normalização de roles (human/ai)  
+- Remoção de dados sensíveis  
+- Parse de datas  
+- Deduplicação  
+- Transformação para JSONL  
+- Exportação pronta para fine-tuning  
+
+Aplicação real de engenharia de dados para IA.
+
+---
+
+## 🏆 🔟 Token Usage Dashboard
+Dashboard orientado a objetos para análise de datasets:
+
+- Leitura de JSONL  
+- Estimativa de tokens  
+- Classificação de tópicos por regras  
+- Geração de histogramas e gráficos  
+
+Aplicação de análise quantitativa em datasets de treinamento.
+
+---
+
+## 🏆 1️⃣1️⃣ The CLI Assistant
+Assistente de terminal com:
+
+- Memória persistente  
+- Ferramentas integradas (contagem de palavras, data/hora)  
+- Estrutura baseada em agente  
+- Loop interativo  
+- Integração com modelo LLM  
+
+Aplicação prática de arquitetura agentic em ambiente CLI.
+
+---
+
 ## 🛠️ Tecnologias Utilizadas
 - Python  
 - Jupyter Notebook  

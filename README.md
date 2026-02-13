@@ -192,7 +192,23 @@ Script de engenharia de prompt que:
 - Valida se está dentro do intervalo aceitável (±10 palavras)  
 
 Aplicação prática de controle de saída de LLMs.
+```
+# Exemplo de uso
+prompt_final = f"""
+# Role
+{role}
 
+# Tom de voz
+{tom_de_voz}
+
+# Tarefa
+{tarefa}
+
+Pense passo a passo antes de responder.
+"""
+palavras_estimadas = len(prompt_final) // 6.11
+dentro_do_intervalo = numero_maximo - 10 <= palavras_estimadas <= numero_maximo + 10
+```
 ---
 
 ## 🏆 5️⃣ Persistent Chat History

@@ -220,7 +220,7 @@ Chat de terminal com memória persistente:
 - Estrutura organizada por roles  
 
 Aplicação de persistência e controle de contexto.
-```
+```python
 # Salvando histórico
 with open("./modulo_2/conversation_history.txt", "a") as historico:
     for message in new_messages:
@@ -238,7 +238,7 @@ Mini-biblioteca para estimar custo mensal de modelos:
 - Registro automático em `log.txt`  
 
 Aplicação prática de controle financeiro de LLMs.
-```
+```python
 CUSTO_MODELOS_DOLAR = {
     "gpt-5.1": {"input": 1.25, "output": 10},
     "claude-4.5-opus": {"input": 5, "output": 25}
@@ -265,7 +265,7 @@ Mini-SDK orientado a objetos:
 - Padronização de retorno  
 
 Aplicação de POO para arquitetura extensível.
-```
+```python
 class ModeloBase:
     def invoke(self, prompt: str, api_key: str) -> str:
         raise NotImplementedError("Subclasses devem implementar este método")
@@ -289,7 +289,7 @@ Armazenamento vetorial em memória com:
 - Retorno Top-K  
 
 Base para sistemas RAG customizados.
-```
+```python
 class VectorStore:
     def query(self, query: np.array, k: int) -> list:
         distances = []
@@ -316,7 +316,7 @@ Pipeline ETL completo:
 - Exportação pronta para fine-tuning  
 
 Aplicação real de engenharia de dados para IA.
-```
+```python
 class ETL:
     def pipeline(self) -> pd.DataFrame:
         df = self.normalize_sender(self.data)      # human/ai
@@ -329,7 +329,7 @@ class ETL:
 ```
 
 Saída no formato para Fine-Tuning:
-```
+```python
 {
   "messages": [
     { "role": "user", "content": "..." },
@@ -349,7 +349,7 @@ Dashboard orientado a objetos para análise de datasets:
 - Geração de histogramas e gráficos  
 
 Aplicação de análise quantitativa em datasets de treinamento.
-```
+```python
 # Estrutura de classes
 DatasetReader   → Carrega e extrai textos do JSONL
 TokenStats      → Estima tokens e classifica tópicos
@@ -376,7 +376,7 @@ Assistente de terminal com:
 - Integração com modelo LLM  
 
 Aplicação prática de arquitetura agentic em ambiente CLI.
-```
+```python
 class CLIAssistant:
     def __init__(self, model: str, system_prompt: str, history_path: str):
         self.agent = create_agent(self.model, tools=[

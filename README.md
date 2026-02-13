@@ -192,7 +192,7 @@ Script de engenharia de prompt que:
 - Valida se está dentro do intervalo aceitável (±10 palavras)  
 
 Aplicação prática de controle de saída de LLMs.
-```
+```python
 # Exemplo de uso
 prompt_final = f"""
 # Role
